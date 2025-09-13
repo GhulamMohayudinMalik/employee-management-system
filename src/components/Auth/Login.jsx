@@ -7,9 +7,13 @@ function Login() {
     
     const SubmitHandler = (e) =>{
         e.preventDefault()
+        console.log(email)
+        console.log(password)
+
+        setEmail('')
+        setPassword('')
     }
 
-    const 
 
   return (
     <div className='flex h-screen w-screen items-center justify-center'>
@@ -20,12 +24,15 @@ function Login() {
             SubmitHandler(e)
         }}
         className='flex flex-col gap-10 items-center justify-center p-20'>
-            <input onChange={(e)=>{
-                handleChange
-                value = email
+            <input 
+            value={email}
+            onChange={(e)=>{
+                setEmail(e.target.value)
             }} required className='border-2 border-emerald-600 rounded-full py-3 px-5 outline-none text-xl' type="email" placeholder='Enter your email' />            
-            <input onChange={(e)=>{
-                handleChange
+            <input 
+            value={password}
+            onChange={(e)=>{
+                setPassword(e.target.value)
             }} required className='border-2 border-emerald-600 rounded-full py-3 px-5 outline-none text-xl' type="password" placeholder='Enter your password'/>  
             <button className='bg-emerald-600 rounded-full py-3 px-5 outline-none'>Login</button>          
         </form>
