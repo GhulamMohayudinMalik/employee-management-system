@@ -12,6 +12,7 @@ function App() {
   const [loggedInUserData, setLoggedInUserData] = useState(null)
   const authData = useContext(AuthContext)
 
+
   useEffect(() => {
     if (authData) {
       const loggedInUser = localStorage.getItem('loggedInUser')
